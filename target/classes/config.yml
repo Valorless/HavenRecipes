@@ -1,0 +1,24 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Config                         | #
+# +------------------------------------------------------+ #
+############################################################
+
+# DO NOT EDIT
+config-version: 0
+
+# Shows additional messages in console.
+debug: false
+
+# Whether the plugin is enabled.
+# Reload command is always enabled.
+enabled: true
+
+# Should we check for plugin updates?
+check-updates: true
+
+# Plugin's commands. (Requires restart)
+# /Deathroll cannot be disabled, as it is default.
+commands:
+ - hrecipe
+ - hr

@@ -1,0 +1,29 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                  Advanced Recipe                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+# All fields except for 'enabled', 'shape' and 'ingredients' are optional, and can be removed.
+
+### Template Recipe
+enabled: true
+# Whether the shape matters like crafting a sword, or doesn't matter like crafting sticks.
+# Types: SHAPED / SHAPELESS
+recipe-type: SHAPED
+# You can change the crafted item to a custom item, by exporting it as json, and putting it here.
+# You can export any item by holding it, and using '/havenrecipe export'
+# NOTE: Not all NBT data is accepted by the vanilla system, and may result in an empty recipe.
+custom-item: '{"==":"org.bukkit.inventory.ItemStack","v":3700,"type":"DIAMOND_SWORD","meta":{"==":"ItemMeta","meta-type":"UNSPECIFIC","display-name":"{\"extra\":[{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FB8E1D\",\"text\":\"V\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FB841B\",\"text\":\"e\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FB7A19\",\"text\":\"r\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FB7017\",\"text\":\"y \"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC6515\",\"text\":\"D\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC5B13\",\"text\":\"e\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC5111\",\"text\":\"c\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC470E\",\"text\":\"e\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC3D0C\",\"text\":\"n\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC330A\",\"text\":\"t \"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FC2908\",\"text\":\"S\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FD1E06\",\"text\":\"w\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FD1404\",\"text\":\"o\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FD0A02\",\"text\":\"r\"},{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FD0000\",\"text\":\"d\"}],\"text\":\"\"}","lore":["{\"text\":\"\",\"extra\":[{\"text\":\"Indeed Decent.\",\"obfuscated\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"color\":\"gray\",\"bold\":false}]}"],"enchants":{"DAMAGE_ALL":7,"DURABILITY":10}}}'
+# How the recipe is layed out in the crafting table.
+# Use X for air/nothing.
+shape:
+ - NNN
+ - NEN
+ - NNN
+ingredients:
+ N:
+  material: NETHERITE_BLOCK
+ E:
+  material: ENDER_EYE
+ 

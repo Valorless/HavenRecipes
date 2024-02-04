@@ -1,0 +1,34 @@
+name: HavenRecipes
+main: valorless.havenrecipes.Main
+version: version-number
+author: Valorless
+depend: [ValorlessUtils]
+api-version: 1.18
+commands:
+  havenrecipes:
+    description: Main command.
+    usage: 
+    aliases: [hr, hrecipe]
+  havenrecipes reload:
+    description: Reloads the configuration file.
+    usage: /havenrecipes reload
+    permission: havenrecipes.reload
+    permission-message: You don't have havenrecipes.reload.
+  havenrecipes export:
+    description: Export item held in hand.
+    usage: /havenrecipes export
+    permission: havenrecipes.export
+    permission-message: You don't have havenrecipes.export.
+permissions:
+  havenrecipes.*:
+    description: Gives access to all HavenRecipes commands.
+    children:
+      havenrecipes.export: true
+      havenrecipes.reload: true
+  havenrecipes.export:
+    description: Allows you to export items.
+    default: op
+  havenrecipes.reload:
+    description: Allows you to reload the configuration.
+    default: op
+  
