@@ -3,6 +3,7 @@ main: valorless.havenrecipes.Main
 version: version-number
 author: Valorless
 depend: [ValorlessUtils]
+softdepend: [PlaceholderAPI]
 api-version: 1.18
 commands:
   havenrecipes:

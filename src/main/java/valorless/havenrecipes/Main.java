@@ -93,7 +93,7 @@ public final class Main extends JavaPlugin implements Listener {
 		
 		if(config.GetBool("check-updates") == true) {
 			Log.Info(plugin, "Checking for updates..");
-			new UpdateChecker(this, 0).getVersion(version -> {
+			new UpdateChecker(this, 114908).getVersion(version -> {
 
 				newVersion = version;
 				String update = version.replace(".", "");
@@ -106,7 +106,7 @@ public final class Main extends JavaPlugin implements Listener {
 				if (v < newupdate) {
 						Log.Warning(plugin, String.format("An update has been found! (v%s, you are on v%s) \n", version, getDescription().getVersion()) + 
 							"This could be bug fixes or additional features.\n" + 
-							"Please update HavenRecipes at https://www.spigotmc.org/resources/null/");
+							"Please update HavenRecipes at https://www.spigotmc.org/resources/114908/");
 					
 					uptodate = false;
 				}else {
@@ -114,6 +114,12 @@ public final class Main extends JavaPlugin implements Listener {
 				}
 			});
 		}
+		
+		// All you have to do is adding the following two lines in your onEnable method.
+        // You can find the plugin ids of your plugins on the page https://bstats.org/what-is-my-plugin-id
+        int pluginId = 20905; // <-- Replace with the id of your plugin!
+        @SuppressWarnings("unused")
+		Metrics metrics = new Metrics(this, pluginId);
 		
 		Log.Debug(plugin, "Registering Crafting");
 		getServer().getPluginManager().registerEvents(new Crafting(), this);
