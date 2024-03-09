@@ -183,8 +183,12 @@ public class Crafting implements Listener {
 		Object[] ings = recipe.GetConfigurationSection("ingredients").getKeys(false).toArray();
 		for(Object ingredient : ings) {
 			String letter = String.valueOf(ingredient);
-			Material material = Material.getMaterial(recipe.GetString("ingredients." + ingredient + ".material"));			
-			ingredients.add(new Ingredient(letter, material));
+			Material material = Material.getMaterial(recipe.GetString("ingredients." + ingredient + ".material"));	
+			Ingredient i = new Ingredient(letter, material);
+			if(recipe.HasKey("ingredients." + ingredient + ".amount")) {
+				i.SetAmount(recipe.GetInt("ingredients." + ingredient + ".amount"));
+			}
+			ingredients.add(i);
 		}
 		return ingredients;
 	}

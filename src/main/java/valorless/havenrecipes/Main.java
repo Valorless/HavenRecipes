@@ -43,7 +43,7 @@ public final class Main extends JavaPlugin implements Listener {
 	boolean ValorlessUtils() {
 		Log.Debug(plugin, "Checking ValorlessUtils");
 		
-		int requiresBuild = 173;
+		int requiresBuild = 219;
 		
 		String ver = Bukkit.getPluginManager().getPlugin("ValorlessUtils").getDescription().getVersion();
 		//Log.Debug(plugin, ver);

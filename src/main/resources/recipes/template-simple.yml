@@ -44,8 +44,12 @@ shape:
 ingredients:
  L:
   material: LEATHER
+  # Amount, used only for shapeless recipes.
+  amount: 1
  S:
   material: STRING
+  # Amount, used only for shapeless recipes.
+  amount: 1
 # NBTCompount tags.
 # NOTE: Not all NBT data is accepted by the vanilla system, and may result in an empty recipe.
 nbt:
