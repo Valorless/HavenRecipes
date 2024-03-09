@@ -1,0 +1,39 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                   Simple Recipes                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+# All fields except for 'enabled', 'recipe-type', 'material', 'shape' and 'ingredients' are optional, and can be removed.
+
+### Template Recipe
+enabled: true
+# Whether the shape matters like crafting a sword, or doesn't matter like crafting sticks.
+# Types: SHAPED / SHAPELESS
+recipe-type: SHAPED
+# Custom name.
+displayname: '&fCopper Helmet'
+# Item material.
+# Full list: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+material: GOLDEN_HELMET
+# Amount to be crafted.
+amount: 1
+# Permission required to craft this recipe.
+permission: havenrecipe.copper.helmet
+# Custom Model Data
+custom-model-data: 90001
+# Enchantments
+# Name:Level
+# Full list: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html
+enchants:
+ - 'DURABILITY:2'
+# How the recipe is layed out in the crafting table.
+# Use X for air/nothing.
+shape:
+ - CCC
+ - CXC
+ - XXX
+ingredients:
+ C:
+  material: COPPER_INGOT
+  

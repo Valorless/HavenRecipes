@@ -72,10 +72,7 @@ public class Crafting implements Listener {
 				CraftRecipe r = new CraftRecipe(Main.plugin, name, type, ingredients, result, shape);
 				
 				if(recipe.HasKey("permission")) {
-					Permission perm = new Permission(recipe.GetString("permission"));
-					if(Bukkit.getPluginManager().getPermission(recipe.GetString("permission")) == null) {
-						Bukkit.getPluginManager().addPermission(perm);
-					}
+					Permission perm = new Permission(recipe.GetString("permission"));					
 					r.SetPermission(perm);
 				}
 
